@@ -15,12 +15,12 @@
 
 --- a/target/linux/ipq807x/image/generic.mk
 +++ b/target/linux/ipq807x/image/generic.mk
-@@ -68,7 +68,7 @@ define Device/qnap_301w
- 	IMAGES += factory.bin sysupgrade.bin
- 	IMAGE/factory.bin := append-rootfs | pad-rootfs | pad-to 64k
- 	IMAGE/sysupgrade.bin/squashfs := append-rootfs | pad-to 64k | sysupgrade-tar rootfs=$$$$@ | append-metadata
--	DEVICE_PACKAGES := ipq-wifi-qnap_301w e2fsprogs kmod-fs-ext4 losetup
-+	DEVICE_PACKAGES := ipq-wifi-qnap_301w e2fsprogs kmod-fs-ext4 losetup kmod-usb3 kmod-usb-dwc3 kmod-usb-dwc3-qcom
+@@ -113,7 +113,7 @@ define Device/qnap_301w
+ 	DEVICE_DTS_CONFIG := config@hk01
+ 	KERNEL_SIZE := 16384k
+ 	SOC := ipq8072
+-	DEVICE_PACKAGES += ipq-wifi-qnap_301w
++	DEVICE_PACKAGES += ipq-wifi-qnap_301w kmod-usb3 kmod-usb-dwc3 kmod-usb-dwc3-qcom
  endef
  TARGET_DEVICES += qnap_301w
  
