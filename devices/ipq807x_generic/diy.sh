@@ -9,4 +9,4 @@ sh -c "curl -sfL https://github.com/robimarko/openwrt/commit/23fa931934151f72c16
 
 sed -i '/rm -rf $(KDIR)\/tmp/d' include/image.mk
 
-rm -rf feeds/kiddin9/{rtl8821cu,rtl88x2bu} package/kernel/mt76
+rm -rf feeds/kiddin9/{rtl8821cu,rtl88x2bu} package/kernel/mt76 devices/common/patches/mt7922.patch
