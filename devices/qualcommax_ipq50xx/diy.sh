@@ -4,6 +4,6 @@ shopt -s extglob
 
 SHELL_FOLDER=$(dirname $(readlink -f "$0"))
 
-wget -N https://raw.githubusercontent.com/openwrt/openwrt/refs/heads/openwrt-24.10/target/imagebuilder/files/Makefile -P target/imagebuilder/files/
+rm -rf package/boot/uboot-envtools package/firmware/ipq-wifi target/linux/qualcommax package/kernel/mac80211
 
-wget -N https://raw.githubusercontent.com/openwrt/openwrt/refs/heads/openwrt-24.10/package/base-files/files/sbin/sysupgrade -P package/base-files/files/sbin/
+git_clone_path main openwrt/openwrt package/boot/uboot-envtools package/firmware/ipq-wifi target/linux/qualcommax package/kernel/mac80211
